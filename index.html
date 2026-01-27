@@ -48,6 +48,12 @@
             50% { transform: translateY(-20px); }
         }
 
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-10px); }
+            75% { transform: translateX(10px); }
+        }
+
         /* Home Page */
         .home-page {
             min-height: 100vh;
@@ -421,6 +427,291 @@
             color: #ea580c;
         }
 
+        /* Admin Login Styles */
+        .admin-login-page {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 50%, #ea580c 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .login-container {
+            background: white;
+            border-radius: 24px;
+            padding: 3rem;
+            max-width: 450px;
+            width: 90%;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            border-top: 6px solid #ea580c;
+            animation: slideUp 0.6s ease-out;
+        }
+
+        .login-icon {
+            text-align: center;
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .login-title {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+            background: linear-gradient(135deg, #1e40af 0%, #ea580c 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        .login-subtitle {
+            text-align: center;
+            color: #64748b;
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+        }
+
+        .password-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .password-input {
+            width: 100%;
+            padding: 1rem 1.25rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            text-align: center;
+            letter-spacing: 0.5rem;
+        }
+
+        .password-input:focus {
+            outline: none;
+            border-color: #2563eb;
+            box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+        }
+
+        .login-btn {
+            width: 100%;
+            background: linear-gradient(135deg, #2563eb 0%, #ea580c 100%);
+            color: white;
+            padding: 1rem 2rem;
+            font-size: 1.125rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+        }
+
+        .login-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(37, 99, 235, 0.4);
+        }
+
+        .login-error {
+            background: #fee2e2;
+            color: #991b1b;
+            padding: 0.75rem;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 1rem;
+            font-weight: 600;
+            animation: shake 0.5s;
+        }
+
+        .back-to-dashboard {
+            margin-top: 1.5rem;
+            text-align: center;
+        }
+
+        .back-to-dashboard a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .back-to-dashboard a:hover {
+            color: #ea580c;
+        }
+
+        /* Admin Dashboard Styles */
+        .admin-dashboard {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #f8fafc 0%, #dbeafe 100%);
+        }
+
+        .admin-welcome {
+            background: white;
+            border-radius: 24px;
+            padding: 2.5rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-top: 4px solid #ea580c;
+            text-align: center;
+        }
+
+        .admin-welcome-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .admin-welcome-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            background: linear-gradient(135deg, #1e40af 0%, #ea580c 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.75rem;
+        }
+
+        .admin-welcome-subtitle {
+            color: #64748b;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .admin-auth-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+            color: #1e40af;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+            border: 2px solid #2563eb;
+        }
+
+        .reports-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .report-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border-top: 4px solid #2563eb;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .report-card:nth-child(2n) {
+            border-top-color: #ea580c;
+        }
+
+        .report-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.05) 0%, transparent 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .report-card:nth-child(2n)::before {
+            background: linear-gradient(135deg, rgba(234, 88, 12, 0.05) 0%, transparent 100%);
+        }
+
+        .report-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+        }
+
+        .report-card:hover::before {
+            opacity: 1;
+        }
+
+        .report-card-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #2563eb;
+            position: relative;
+            z-index: 1;
+        }
+
+        .report-card:nth-child(2n) .report-card-icon {
+            color: #ea580c;
+        }
+
+        .report-card h3 {
+            font-size: 1.25rem;
+            color: #1e293b;
+            margin-bottom: 0.75rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .report-card p {
+            color: #64748b;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .report-card-link {
+            color: #2563eb;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .report-card:nth-child(2n) .report-card-link {
+            color: #ea580c;
+        }
+
+        .logout-section {
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        .logout-btn {
+            background: #ef4444;
+            color: white;
+            padding: 0.75rem 2rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 1rem;
+        }
+
+        .logout-btn:hover {
+            background: #dc2626;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+        }
+
         /* Forms */
         .form-page {
             min-height: 100vh;
@@ -693,6 +984,9 @@
             .innovation-types {
                 grid-template-columns: 1fr;
             }
+            .reports-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -838,6 +1132,110 @@
                     <p>View WHO, MOH, and WCSH priorities</p>
                     <div class="nav-card-link">Open Form →</div>
                 </div>
+                
+                <div class="nav-card" onclick="showPage('adminLogin')">
+                    <div class="nav-card-icon">🔐</div>
+                    <h3>Admin Panel</h3>
+                    <p>Access reports and analytics (Authorized personnel only)</p>
+                    <div class="nav-card-link">Enter Admin →</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin Login Page -->
+    <div id="adminLoginPage" class="admin-login-page hidden">
+        <div class="bg-blob blob1"></div>
+        <div class="bg-blob blob2"></div>
+        <div class="bg-blob blob3"></div>
+        
+        <div class="login-container">
+            <div class="login-icon">🔐</div>
+            <h2 class="login-title">Admin Access</h2>
+            <p class="login-subtitle">Enter password to access reports and analytics</p>
+            
+            <div class="password-group">
+                <input 
+                    type="password" 
+                    class="password-input" 
+                    id="adminPassword" 
+                    placeholder="••••••••"
+                    onkeypress="handlePasswordKeyPress(event)"
+                    maxlength="20"
+                >
+            </div>
+            
+            <button class="login-btn" onclick="checkAdminPassword()">
+                <span>🔓</span>
+                <span>Enter Admin Panel</span>
+            </button>
+            
+            <div id="loginError" class="hidden"></div>
+            
+            <div class="back-to-dashboard">
+                <a href="#" onclick="showPage('dashboard'); return false;">
+                    ← Back to Dashboard
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin Dashboard Page -->
+    <div id="adminDashboardPage" class="admin-dashboard hidden">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <div class="nav-logo" id="navLogoAdmin">🏆</div>
+                <div>
+                    <div class="nav-title">WCSH HIH - Admin Panel</div>
+                    <div style="font-size: 0.75rem; color: #64748b;">Reports & Analytics</div>
+                </div>
+            </div>
+            <button class="home-btn" onclick="showPage('home')">🏠 Home</button>
+        </nav>
+
+        <div class="container">
+            <div class="admin-welcome">
+                <div class="admin-welcome-icon">👋</div>
+                <h1 class="admin-welcome-title">Welcome to Admin Panel</h1>
+                <p class="admin-welcome-subtitle">Access comprehensive reports and analytics</p>
+                <div class="admin-auth-badge">🔒 AUTHORIZED PERSONNEL ONLY</div>
+            </div>
+
+            <div class="reports-grid">
+                <div class="report-card" onclick="openReport('registration')">
+                    <div class="report-card-icon">📊</div>
+                    <h3>Registration Report</h3>
+                    <p>View all innovation registrations and submissions</p>
+                    <div class="report-card-link">Open Report →</div>
+                </div>
+                
+                <div class="report-card" onclick="openReport('ideation')">
+                    <div class="report-card-icon">💭</div>
+                    <h3>Ideation & Brainstorming Report</h3>
+                    <p>Access collaborative session records and insights</p>
+                    <div class="report-card-link">Open Report →</div>
+                </div>
+                
+                <div class="report-card" onclick="openReport('scoring')">
+                    <div class="report-card-icon">📈</div>
+                    <h3>Scoring Matrix Report</h3>
+                    <p>Review innovation evaluations and scores</p>
+                    <div class="report-card-link">Open Report →</div>
+                </div>
+                
+                <div class="report-card" onclick="openReport('testing')">
+                    <div class="report-card-icon">🧪</div>
+                    <h3>Project Test Report</h3>
+                    <p>Examine testing results and recommendations</p>
+                    <div class="report-card-link">Open Report →</div>
+                </div>
+            </div>
+
+            <div class="logout-section">
+                <button class="logout-btn" onclick="logoutAdmin()">
+                    <span>🚪</span>
+                    <span>Logout from Admin Panel</span>
+                </button>
             </div>
         </div>
     </div>
@@ -1340,6 +1738,17 @@
         // IMPORTANT: Replace this with your Google Apps Script URL
         const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxY2CDRLZGGuIP6xiCFvxL5TQC3Il66WGOllLZ8nWlg8nW6niavTTRX1Tg-I6M-w_gR/exec';
         
+        // Admin password
+        const ADMIN_PASSWORD = 'HIH2025';
+        
+        // Google Sheets report URLs
+        const REPORT_URLS = {
+            registration: 'https://docs.google.com/spreadsheets/d/1rP86bClUUbXms4qAwnrTSBkkksUSnU5JnFnuavbrnEk/edit?gid=0#gid=0',
+            ideation: 'https://docs.google.com/spreadsheets/d/1rP86bClUUbXms4qAwnrTSBkkksUSnU5JnFnuavbrnEk/edit?gid=1984356677#gid=1984356677',
+            scoring: 'https://docs.google.com/spreadsheets/d/1rP86bClUUbXms4qAwnrTSBkkksUSnU5JnFnuavbrnEk/edit?gid=411292220#gid=411292220',
+            testing: 'https://docs.google.com/spreadsheets/d/1rP86bClUUbXms4qAwnrTSBkkksUSnU5JnFnuavbrnEk/edit?gid=1083471053#gid=1083471053'
+        };
+        
         // Logo Configuration
         // If you have a logo file, set this to true and make sure logo.png exists in the same folder
         const USE_CUSTOM_LOGO = true; // Change to true when you add logo.png
@@ -1352,9 +1761,14 @@
                 const homeLogo = document.getElementById('homeLogo');
                 homeLogo.innerHTML = '<img src="' + LOGO_PATH + '" alt="WCSH HIH Logo" class="logo-image">';
                 
-                // Update navigation logo
+                // Update navigation logos
                 const navLogo = document.getElementById('navLogo');
                 navLogo.innerHTML = '<img src="' + LOGO_PATH + '" alt="WCSH HIH Logo" class="nav-logo-img">';
+                
+                const navLogoAdmin = document.getElementById('navLogoAdmin');
+                if (navLogoAdmin) {
+                    navLogoAdmin.innerHTML = '<img src="' + LOGO_PATH + '" alt="WCSH HIH Logo" class="nav-logo-img">';
+                }
             }
         });
         
@@ -1386,12 +1800,62 @@
         
         // Page navigation
         function showPage(pageName) {
-            const pages = ['home', 'dashboard', 'registration', 'ideation', 'scoring', 'testing', 'priorities'];
+            const pages = ['home', 'dashboard', 'registration', 'ideation', 'scoring', 'testing', 'priorities', 'adminLogin', 'adminDashboard'];
             pages.forEach(page => {
-                document.getElementById(page + 'Page').classList.add('hidden');
+                const pageElement = document.getElementById(page + 'Page');
+                if (pageElement) {
+                    pageElement.classList.add('hidden');
+                }
             });
-            document.getElementById(pageName + 'Page').classList.remove('hidden');
+            const targetPage = document.getElementById(pageName + 'Page');
+            if (targetPage) {
+                targetPage.classList.remove('hidden');
+            }
             window.scrollTo(0, 0);
+        }
+        
+        // Admin login functionality
+        function handlePasswordKeyPress(event) {
+            if (event.key === 'Enter') {
+                checkAdminPassword();
+            }
+        }
+        
+        function checkAdminPassword() {
+            const passwordInput = document.getElementById('adminPassword');
+            const errorDiv = document.getElementById('loginError');
+            const enteredPassword = passwordInput.value;
+            
+            if (enteredPassword === ADMIN_PASSWORD) {
+                // Correct password
+                passwordInput.value = '';
+                errorDiv.classList.add('hidden');
+                showPage('adminDashboard');
+            } else {
+                // Wrong password
+                errorDiv.textContent = '❌ Incorrect password. Access denied.';
+                errorDiv.classList.remove('hidden');
+                passwordInput.value = '';
+                passwordInput.focus();
+                
+                // Hide error after 3 seconds
+                setTimeout(() => {
+                    errorDiv.classList.add('hidden');
+                }, 3000);
+            }
+        }
+        
+        function logoutAdmin() {
+            showPage('dashboard');
+        }
+        
+        function openReport(reportType) {
+            const url = REPORT_URLS[reportType];
+            if (url && url !== 'https://docs.google.com/spreadsheets/d/YOUR_SPREADSHEET_ID/edit#gid=REGISTRATION_SHEET_GID') {
+                window.open(url, '_blank');
+            } else {
+                alert('Please update the Google Sheets URL for ' + reportType + ' report in the REPORT_URLS configuration.');
+            }
         }
         
         // Form submission
